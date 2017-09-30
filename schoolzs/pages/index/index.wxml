@@ -1,0 +1,157 @@
+<!--index.wxml-->
+<!--<navigator url="url"></navigator>-->
+<view class="container">
+<!--轮播-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='width:100%'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.photo}}" class="slide-image" width="100%" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="er">
+<!--定位-->
+   <view class="dingwei">
+   <view class="sb"  bindtap="getLocation">
+     <image mode="aspectFit" src="../../image/map.png" class="im"></image> {{address}}
+     </view>
+   </view>
+<!--搜索-->
+<view class="sousuo">
+     <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14" bindtap="sou"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" value="{{inputValue}}" focus="{{inputShowed}}" bindblur="inputTyping" bindconfirm="searchAction"/>
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+            </view>
+        </view>
+</view>
+</view>
+<!--分类-->
+<view class="section">
+   <view class="flex-wrp" >
+    <view class="flex-item" wx:for="{{proCat}}" bindtap="feilei" data-id="{{item.id}}" data-title="{{item.name}}">
+        <image src="{{item.img}}" class="flex-imgs" ></image>
+        <div class='fenlei'>{{item.name}}</div>
+    </view>
+   </view>
+ </view>
+ <!--我是一条分割线-->
+ <view class="xian">
+</view> 
+<view class="name">
+    <i style='color:#CD2626'>▎</i><i>热门推荐 </i>
+</view>
+<!--横滑动-->
+<view  class="heng" >
+ <view class="one" wx:for="{{productData}}" bindtap="jing" data-id="{{item.id}}"> 
+    <image src="{{item.photo_x}}"></image>
+     <view class="bai">{{item.name}}</view>
+ </view> 
+</view>
+ <!--我是一条分割线-->
+ <view class="xian">
+</view>
+
+<!--供求-->
+<view class="name">
+    <i style='color:#CD2626'>▎</i><i>供求发布</i>
+</view>
+<view class="tab"> 
+<!--头部-->
+      <view class="tab-left" bindtap="tabFun"> 
+          <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">招生</view><text style="color:#ccc">|</text>
+          <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">找学校</view> 
+      </view> 
+ 
+<view class="tab-right"> 
+
+ <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}"  >
+ <view class="boxx" wx:for="{{gong}}">
+    <view class="png">
+            <image src="{{item.photo_x?item.photo_x:item.photo}}"></image>
+            <!--<text>wenzifaf二维</text>-->
+     </view>
+    <!-- <view class="fss">
+          {{item.content}}
+    </view> 
+      <view class="riqi">发布日期：{{item.addtime}}</view>
+      <view class="qiang">
+         <span class="dan" bindtap="jie" data-id="{{item.id}}" >接单</span> 
+      </view> -->
+      <view class="tab_right_bottom">
+        <view class="fss">
+            {{item.content}}
+        </view> 
+        <view class="tab_right_time">
+          <view class="riqi">发布日期：{{item.addtime}}</view>
+          <view class="qiang">
+            <span class="dan" bindtap="jie" data-id="{{item.id}}" >接单</span> 
+          </view>
+        </view>
+      </view>
+ </view>
+ <view class="pages" bindtap="lastpage" data-ptype="1" wx:if="{{gong!=''}}">上一页</view> 
+ <view class="pages" bindtap="nextpage" data-ptype="1" wx:if="{{gong!=''}}">下一页</view>
+ <view class="one1" bindtap="setModalStatus" data-status="1" data-dtype="1"><text>我要发布</text></view>
+ </view> 
+
+ <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}"  >
+ <view class="boxx" wx:for="{{qiu}}">
+    <view class="png">
+            <image src="{{item.photo_x?item.photo_x:item.photo}}"></image>
+            <!--<text>wenzifaf二维</text>-->
+     </view>
+    <!-- <view class="fss">
+          {{item.content}}
+    </view> 
+      <view class="riqi">发布日期：{{item.addtime}}</view>
+      <view class="qiang">
+         <span class="dan" bindtap="jie" data-id="{{item.id}}" >接单</span> 
+      </view> -->
+      <view class="tab_right_bottom">
+        <view class="fss">
+            {{item.content}}
+        </view> 
+        <view class="tab_right_time">
+          <view class="riqi">发布日期：{{item.addtime}}</view>
+          <view class="qiang">
+            <span class="dan" bindtap="jie" data-id="{{item.id}}" >接单</span> 
+          </view>
+        </view>
+      </view>
+ </view>
+ <view class="pages" bindtap="lastpage" data-ptype="2" wx:if="{{qiu!=''}}">上一页</view> 
+ <view class="pages" bindtap="nextpage" data-ptype="2" wx:if="{{qiu!=''}}">下一页</view>
+ <view class="one1" bindtap="setModalStatus" data-status="1" data-dtype="2"><text>我要发布</text></view>
+ </view> 
+</view> 
+</view>
+<!--弹窗-->
+    <view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>    
+  <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+
+  <view class="close_icon" bindtap="setModalStatus" data-status="0">×</view>
+  <view class="drawer_attr_content">
+    <view class="text_center">
+
+        <view class="section">
+          <form bindsubmit="bindFormSubmit" style="position:relative;">
+            <textarea fixed="true" placeholder-style='font-size:26rpx;' maxlength='50' placeholder="请输入你需要的内容(限50字)" name="content"/>
+            <view style="position: absolute;bottom:50px;left:20rpx;z-index:333;">
+                <image src="{{imgs}}" style="width:100rpx;height:100rpx"></image>
+            </view>
+            <button bindtap="chooseImage" class="aaa">选择图片</button>
+            <button form-type="submit" class="button">发布供求</button>
+          </form>
+        </view>
+
+      </view>
+      </view>
+   </view>
+</view>  

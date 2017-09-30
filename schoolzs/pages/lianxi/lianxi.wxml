@@ -1,0 +1,32 @@
+<image class="jj" src="../../image/kefu.jpg"></image>
+<view>
+<button class="kk" type="default" bindtap="calling">
+<image src="../../image/phone.png" class="image" mode="aspectFit"></image>
+
+拨打电话</button>
+</view>
+<view>
+
+<button class="kk">
+<image src="../../image/kefu.png" class="image" mode="aspectFit"></image>
+<view class=cont">
+<contact-button></contact-button>
+<contact-button></contact-button>
+<contact-button></contact-button>
+<contact-button></contact-button>
+</view>
+
+在线客服
+</button>
+
+<!--<contact-button type="default-dark"size="20" session-from="weapp"
+ class='kk'>
+<contact-button></contact-button>
+<contact-button></contact-button>
+
+
+
+<text>在线客服</text>
+</contact-button>-->
+
+</view>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="__PUBLIC__/ht/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/ht/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/action.js"></script>
+</head>
+<body>
+
+<div class="aaa_pts_show_1">【 会员信息管理 】</div>
+
+<div class="aaa_pts_show_2">
+    
+    <div>
+       <div class="aaa_pts_4">企业会员信息</div>
+    </div>
+    <div class="aaa_pts_3">
+      <form action="{:U('shenhe')}?id={$id}" method="post" onsubmit="return ac_from();">
+      <ul class="aaa_pts_5">
+         <li>
+            <div class="d1">姓  名:</div>
+            <div>
+              {$info.truename}
+            </div>
+         </li>
+         <li>
+            <div class="d1">营业执照:</div>
+            <div>
+              {$info.bl_number}
+            </div>
+         </li>
+         <li>
+            <div class="d1">手机号码:</div>
+            <div>
+              {$info.tel}
+            </div>
+         </li>
+         <li>
+            <div class="d1">审核状态:</div>
+            <div>
+               <if condition="$info.audit eq 1"><span style="color:red;">待审核</span>
+               <elseif condition="$info.audit eq 2" /><span style="color:green;">审核通过</span>
+               <elseif condition="$info.audit eq 3" /><span style="color:red;">不通过</span>
+               </if>
+            </div>
+         </li>
+         <li>
+            <div class="d1">理由/原因:</div>
+            <div>
+              {$info.reason}
+            </div>
+         </li>
+      </ul>
+      </form> 
+    </div>
+</div>
+<div class="aaa_pts_show_2">
+        <div>
+           <div class="aaa_pts_4">营业执照图:</div>
+        </div>
+        <div class="aaa_pts_3">
+           <div style="line-height:80px; font-size:18px; text-align:center;">
+              <img src="__DATA__/{$info.bl_photo}" />
+           </div>
+        </div>
+    </div>
+<script>
+function ac_from(){
+
+   
+}
+</script>
+</body>
+</html>

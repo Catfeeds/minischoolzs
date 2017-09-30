@@ -1,0 +1,343 @@
+/* pages/course/course.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.course{
+    display: flex;
+    flex-direction: column;
+    font-family:"微软雅黑";
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(217,217,217,0.3);
+}
+/*left*/
+.main{
+    flex:1;
+    width: 100%;
+    display: flex;
+}
+.courses-left{
+    flex: 1;
+    overflow: hidden
+}
+.courses-left view{
+    width:100%;
+    display: block;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #777;
+    padding-left: 8rpx;
+    text-align: center;
+}
+.courses-left text{
+    width: 100%;
+    display: block;
+    padding: 15rpx 0;
+    font-size:28rpx;
+
+}
+.courses-left .active{
+    background-size: 8rpx 80rpx;
+}
+.active text{
+    background: #fff;
+}
+/*right*/
+.courses-right{
+    flex: 3;
+    background: #fff;
+    overflow: hidden;
+    padding-top: 20rpx;
+}
+.courses-right scroll-view{
+    width: 93%;
+    height: 100%;
+    padding: 0 20rpx;
+}
+/*
+.courses-right .catalog{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    padding-top: 40rpx;
+}*/
+
+.courses-right .listing text{
+    display: inline-block;
+    padding-right: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+
+/**app.wxss**/
+.pageContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+} 
+.flex{
+  display: flex;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-col{
+  flex-direction: column;
+}
+
+/*head   search*/
+.pageContainer .search{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+}
+.pageContainer .search-left{
+  flex: 15;
+  background: #fff;
+  height: 60rpx;
+  border-radius: 10rpx;
+  text-align: left;
+  box-shadow: 0 0 1px #ccc;
+}
+.pageContainer .seach-box{
+  width: 60rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  float: left;
+  border-radius: 50%;
+  padding: 20rpx;
+}
+.seach-box view{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #999;
+  border-radius: 50%;
+  position: relative;
+}
+.seach-box view:after{
+  content:"";
+  position:absolute;
+  width:9rpx;
+  height:4rpx;
+  background:#999;
+  right:-5rpx;
+  bottom:-1rpx;
+  transform:rotate( 38deg );
+}
+
+.pageContainer .search-left input{
+  display: inline-block;
+  height: 60rpx;
+  color:#000;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #FFF;
+  line-height: 26rpx;
+  padding-top: 5rpx;
+}
+.pageContainer .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.pageContainer .search .search-right{
+  flex: 2;
+  margin-left:20rpx;
+}
+.pageContainer .search .search-right image{
+  width: 43rpx;
+  height: 30rpx;
+  padding: 15rpx;
+}
+/*ad*/
+.ad ,.course-grp-item{
+  width:700rpx;
+  margin:20rpx 0;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.ad navigator:first-child image{
+  width:700rpx;
+  height: 160rpx;
+}
+.ad image,.course-grp-item image{
+  margin-top: 10rpx;
+  width:335rpx;
+  height: 160rpx;
+}
+
+
+.loginbox{
+    position: relative;
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    transition: top .8s;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.animate{
+    top: 0;
+}
+.loginbox .back{
+    position: absolute;
+    top: 20rpx;
+    left: 30rpx;
+    font-size: 35rpx;
+    color: #666;
+}
+
+.ban{
+    width: 70%;
+    height: 80rpx;
+    text-align: center;
+    margin: 200rpx auto;
+}
+
+.ban image{
+    display: block;
+    width: 400rpx;
+    margin: 0 auto;
+    height: 50rpx;
+}
+.ban text{
+    letter-spacing: 20rpx;
+    line-height: 30rpx;
+    font-size: 25rpx;
+    color: #999;
+}
+
+
+.way{
+    width:100%;
+    height: 300rpx;
+    box-sizing: border-box;
+    padding: 70rpx 50rpx 0;
+}
+
+.way button{
+    width: 100%;
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-bottom: 30rpx;
+}
+.tell{
+    background: #2cc17b;
+    color: #fff;
+    border: none;
+}
+.call{
+    background: #fff;
+    color: #2cc17b;
+    border: 1px solid #2cc17b;
+}
+
+.next{
+    width: 100%;
+    padding: 0 50rpx;
+    box-sizing: border-box;
+}
+.next text{
+    width: 100%;
+    display: block;
+    font-size: 22rpx;
+    color: #ccc;
+    text-align: center;
+}
+
+.nextLogin{
+    height: 140rpx;
+    padding-top: 50rpx; 
+    width: 100%;
+    display: flex;
+    box-sizing: border-box
+}
+
+.nextLogin view{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nextLogin .imgUrl{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+    background: #fff;
+    border: 1px solid #333;
+    display: flex;
+}
+
+.imgUrl image{
+    width: 25rpx;
+    height: 25rpx;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.nextLogin text{
+    line-height: 40rpx;
+}
+
+.ig{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius:50%; 
+  float: left;
+  margin-right: 20rpx;
+}
+.size{
+padding: 30rpx;
+border: 1px solid #ccc;
+margin-bottom:32rpx;
+height: 100rpx;
+/*box-shadow: 2px 2px 2px  #888888;*/
+padding-bottom:35rpx; 
+border-radius:10rpx 
+}
+.zhu{
+    margin-left: 60rpx;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+
+}
+
+.mt10{
+  margin: 0 auto;
+  text-align: center;
+  height: 70rpx;
+  width: 450rpx;
+  line-height: 70rpx;
+  border-radius:10rpx; 
+  border: 1px solid #999;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+
+.catalog{
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}

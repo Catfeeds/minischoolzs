@@ -1,0 +1,9 @@
+
+<view  class="xin">
+<view class="ming">{{shopInfo.name}}</view>
+<image class="img" src="{{shopInfo.vip_char}}"></image>
+<view class="ld">企业电话：{{shopInfo.tel}}</view>
+<view class="ld">负责人：{{shopInfo.uname}}</view>
+<view class="ld">负责人手机：{{shopInfo.utel}}</view>
+<view class="ld">地址：{{shopInfo.address_xq}}</view>
+</view>

@@ -1,0 +1,36 @@
+<view class="course pageContainer">
+    <!--<view class="search flex">
+        <view class="search-left">
+            <view class="seach-box">
+                <view></view>
+            </view>
+            <input placeholder="请输入" placeholder-class="search-placeholder" placeholder-style="color : #999;"/>
+        </view>
+
+        <view class="search-right flex-item" bindtap="show">
+        <image src="../../image/ci.jpg"></image>
+        </view>
+  </view>
+  -->
+  <view class="main">
+    <view class="courses-left">
+        <view class="{{ coursesInd == 0?'active':'' }}">
+            <text bindtap="changeList" data-index="0">全部</text>
+        </view>
+        <view wx:for="{{courses}}" class="{{ coursesInd == item.id?'active':'' }}" wx:for-item="item">
+            <text bindtap="changeList" data-index="{{item.id}}">{{item.name}}</text>
+        </view>
+    </view>
+
+    <view class="courses-right">
+        <scroll-view scroll-y="true">
+            <view class="size" wx:for="{{mainList}}" wx:for-item="item" bindtap="qiye" data-id="{{item.id}}">
+            <image class="ig" src="{{item.logo}}"></image>
+         <view class="catalog">{{item.name}}</view>
+         <view class="zhu">主营：{{item.main_hy}}</view>
+            </view>
+        <view class="clear mt10" bindtap="getMore">点击查看更多</view> 
+        </scroll-view>
+    </view>
+  </view>
+</view>

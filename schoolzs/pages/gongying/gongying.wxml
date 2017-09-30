@@ -1,0 +1,14 @@
+<view class="tab-right"> 
+    <view style="margin-top:25rpx;"  wx:for="{{gongqiu}}">
+        <text class="jie">发布时间：{{item.addtime}}</text>
+        <view class="zhuan">状态：{{item.desc}}</view>
+      <view class="boxx">
+                 <view class="fon">
+                        {{item.content}}
+                  </view>
+    <view class="riqi">接单人：{{item.rec_name}}</view>
+        <view class="ri">联系电话：{{item.rec_phone}}</view>
+             </view> 
+      </view> 
+</view> 
+

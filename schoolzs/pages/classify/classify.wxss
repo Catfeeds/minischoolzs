@@ -1,0 +1,180 @@
+/*供求*/
+page{
+  height: 100%;
+
+}
+.cont{
+  height: 100%;
+  width: 100%;
+  font-family: '微软雅黑';
+}
+.ac{
+  overflow: hidden;
+}
+.tab {
+  flex-direction: row;
+  width: 100%;
+}
+
+.tab-left {
+  width: 100%;
+  line-height: 160%;
+  font-size: 34rpx;
+  border-right: solid 1px gray;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 99;
+  border-bottom: 1px solid #E0E0E0; 
+}
+
+.tab-left view {
+  text-align: center;
+  display: inline-block;
+  width: 25%;
+  padding: 10rpx 0;
+  /*border-right:1px solid #999; */
+}
+
+.tab-left .active {
+  color: #f00;
+  border-bottom: solid 1px red;
+}
+
+.tab-right {
+  /*line-height: 160%;*/
+  font-family: '微软雅黑';
+}
+
+/*.tab-right .right-item {
+  display: none;
+}*/
+
+.tab-right .right-item.active {
+  display: block;
+}
+
+.boxx {
+  width: 100%;
+  padding: 20rpx;
+  border-bottom: 1px solid #f5f5f5;
+  padding-left: 0rpx;
+}
+.er{
+  width: 70%;
+  display: inline-block;
+}
+.riqi {
+  font-size: 28rpx;
+  margin:10rpx 20rpx;
+  color: #999;
+  margin-left: 30rpx;
+}
+
+.tel {
+  font-size: 28rpx;
+  display: inline-block;
+  margin-right: 50rpx;
+  float: right;
+  border: 1px solid #ff4040;
+  color: #ff4040;
+  padding: 10rpx 10rpx;
+  border-radius: 5rpx;margin-top:20rpx;
+
+
+}
+
+.phone{
+width:42rpx;
+height:30rpx;
+
+}
+
+.riqi text{
+  margin-left: 5px
+}
+
+.png image {
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 50%;
+  position: relative;
+  top: 0rpx;
+  left: 35rpx;display:block;
+  float: left;
+}
+
+.qiang {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+
+.dan {
+  font-size: 30rpx;
+  padding: 10rpx 20rpx;
+  border: 1px solid #ff4040;
+  border-radius: 10rpx;
+  background: #ff4040;
+  color: white;
+}
+
+.fon {
+  display: inline-block;
+  width: 81%;
+  font-size: 33rpx;
+  line-height: 50rpx;
+
+  text-indent: 0.6cm;
+}
+
+.one1 {
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.one1 text {
+  padding: 20rpx;
+  border: 1px solid #666;
+  font-size: 35rpx;
+  font-weight: 700;
+  border-radius: 10rpx;
+  box-shadow: 2px 2px 2px #888;
+}
+
+.mt10 {
+  margin: 0 auto;
+  text-align: center;
+  height: 70rpx;
+  width: 450rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  border: 1px solid #999;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+
+
+
+.bei{
+  height: 100%;
+  width: 100%;
+  background:  rgba(0, 0, 0, 0.2);
+  position: absolute;
+ z-index: 99;
+ overflow: hidden;
+}
+.bei_cont{
+  width: 100%;
+  /*height: 40%;*/
+  background: #fff;
+   z-index: 999
+
+}
+.bei_cont1{
+     padding: 15rpx;
+     padding-left: 75rpx;
+border-bottom: 1px solid #f5f5f5;
+font-size: 30rpx;
+
+}

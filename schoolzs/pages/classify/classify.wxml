@@ -1,0 +1,115 @@
+<!--头部-->
+<view class="cont  {{tab=='1'? 'ac' : ''}}" >
+<view class="classname" style="height:80rpx;"></view>
+  <view class="tab-left" bindtap="tabFun">
+  
+    <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">
+    {{dequ}}
+    </view>
+
+
+
+    <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">
+    {{huxing}}</view>
+
+
+    <view class="{{tabArr.curHdIndex=='3'? 'active' : ''}}" id="tab-hd04" data-id="3">
+    {{jin}}</view>
+
+    <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">
+    {{paxing}}</view>
+
+
+
+
+
+  </view>
+
+  <view class="bei" wx:if="{{no0}}" bindtap="kk">
+    <view class="bei_cont">
+      <view class="bei_cont1" 
+      wx:for='{{htype_list}}'
+      data-id="{{item.id}}"
+       data-index="0"
+        data-txt="{{item.name}}" 
+         bindtap="filter0">{{item.name}}
+         </view>
+    </view>
+  </view>
+
+  <view class="bei" wx:if="{{no1}}" bindtap="kk">
+    <view class="bei_cont">
+      <view class="bei_cont1" 
+      wx:for='{{hu_list}}'
+      data-id="{{item.id}}"
+       data-index="0"
+        data-txt="{{item.name}}" 
+         bindtap="filter1">{{item.name}}
+         </view>
+    </view>
+  </view>
+
+
+  <view class="bei" wx:if="{{no3}}" bindtap="kk">
+    <view class="bei_cont">
+      <view class="bei_cont1" 
+      wx:for='{{price_list}}'
+      data-id="{{item.id}}"
+       data-index="0"
+        data-txt="{{item.name}}" 
+         bindtap="filter3">{{item.name}}
+         </view>
+    </view>
+  </view>
+
+
+  <view class="bei" wx:if="{{no2}}" bindtap="kk">
+    <view class="bei_cont">
+      <view class="bei_cont1" 
+      wx:for='{{pai_list}}'
+      data-stype="{{item.sorttype}}"
+       data-index="0"
+        data-txt="{{item.name}}" 
+         bindtap="filter2">{{item.name}}
+         </view>
+    </view>
+  </view>
+
+
+
+  <view class="tab-right">
+    <!--1-->
+    <view class="right-item ">
+      <view class="boxx" wx:for="{{proData}}">
+        <view class="png" bindtap="jieshao" data-id="{{item.id}}" data-title="{{item.name}}">
+          <image src="../../image/tuu.png"></image>
+          <view class="fon">
+            {{item.name}}
+          </view>
+        </view>
+        <view class="er" bindtap="jieshao" data-id="{{item.id}}" data-title="{{item.name}}">
+            <view class="riqi">
+              <text wx:if="{{item.xq}}">{{item.xq}}</text>
+              <text wx:if="{{item.address}}">{{item.address}}</text>
+              <text wx:if="{{item.htype}}">  {{item.htype}}</text>
+              <text wx:if="{{item.area}}">{{item.area}}</text>
+            </view>
+            <view class="riqi">
+              <text style="color:red;" wx:if="{{item.price==0}}">面议</text>
+              <text style="color:red;" wx:else>{{item.price}}元/月</text>
+              <text>{{item.addtime}}</text>
+            </view>
+        </view>
+        <view class="tel" data-tel="{{item.tel}}" bindtap="calltel">
+          <image src="../../image/tel.png" class="phone"></image>电话
+        </view>
+
+      </view>
+      <view class="clear mt10" bindtap="getMore">点击查看更多</view>
+
+
+    </view>
+
+  </view>
+
+</view>

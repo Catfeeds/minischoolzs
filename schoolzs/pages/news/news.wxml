@@ -1,0 +1,12 @@
+<view class="new">
+     <view class="biaoti">{{newsInfo.name}}</view>
+
+<view class="riqi">
+        <text>{{newsInfo.source}}</text>
+        <text style="margin-left:10px;">{{newsInfo.addtime}}</text>
+</view>
+</view>
+<import src="../../wxParse/wxParse.wxml"/> 
+    <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    </view>

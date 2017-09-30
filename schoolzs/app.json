@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/scenic/scenic",
+    "pages/classify/classify",
+    "pages/course/course",
+    "pages/logs/user",
+    "pages/synopsis/synopsis",
+    "pages/news/news",
+    "pages/personal/personal",
+    "pages/gongying/gongying",
+    "pages/gongyingshop/gongying",
+    "pages/lianxi/lianxi",
+    "pages/qiugoushop/qiugou",
+    "pages/qiugou/qiugou"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0cc803",
+    "navigationBarTitleText": "学校招生",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#0cc803",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/s.png",
+        "selectedIconPath": "image/ss.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "iconPath": "image/q.png",
+        "selectedIconPath": "image/qq.png",
+        "text": "优质企业"
+      },
+      {
+        "pagePath": "pages/logs/user",
+        "iconPath": "image/g.png",
+        "selectedIconPath": "image/gg.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "debug": false
+}

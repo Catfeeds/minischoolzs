@@ -1,0 +1,73 @@
+<view class="register">
+<view class="classname">
+ <text>认证状态：</text>
+ <text wx:if="{{audit==0}}">未提交审核</text>
+ <text wx:elif="{{audit==1}}" style="color:red;">审核中</text>
+ <text wx:elif="{{audit==2}}" style="color:green;">已认证</text>
+ <text wx:elif="{{audit==3}}" style="color:red;">未通过</text>
+ <view>(理由/原因: )</view>
+</view>
+    <view class="user">
+        <text style="color:#000">姓名：</text>
+        <input class="in" data-value="{{truename}}" name="truename"  bindblur="bindKeyname" value="{{truename}}"/>
+    </view>
+<!--手机-->
+    <view class="user">
+        <text style="color:#000">手机：+86</text>
+        <input class="in" data-value="{{tel}}" name="tel"  bindblur="bindTelInput" value="{{tel}}"/>
+    </view>
+ <!--验证码   -->
+    <!--<view class="yz">
+        <text style="color:#000">验证码：</text>
+        <input  class="sim" data-value="{{yz}}" name="yzm" bindinput="bindyz" value="{{yz}}"/>
+    </view>-->
+ <!--类型选择   -->
+<view class="jj">
+  <view class="section" wx:if="{{ptype==2}}">
+      <!--<view class="sectiontitle">类型选择：</view>-->
+      <view class="picker">
+          类型： <text class="xuan" style="color:orange;">认证企业</text> 
+      </view>
+  </view>
+  <view class="section" wx:else>
+      <!--<view class="sectiontitle">类型选择：</view>-->
+      <picker bindchange="bindPickerChange"  value="{{index}}" range="{{array}}">
+          <view class="picker">
+            类型选择： <text class="xuan" >{{array[index]}}</text> 
+          </view>
+      </picker>
+  </view>
+</view>
+    <!--导游证号-->
+<view class="kk">
+        <text style="color:#000">营业执照号：</text>
+        <input class="you" data-value="{{blNumber}}" data-id="dao" name='bl_number' bindblur='numberInputEvent' value="{{blNumber}}"/>
+    </view>
+    <p class='ru'>ps:如果你是企业请填写营业执照编号以及上传图片文件，如果您已认证，提交将会重新审核</p>
+<!--注册-->
+
+<!--上传-->
+<view class="ii">( the image should be under 5MB）</view>
+<view class="page-body-info">
+<!--one-->
+    <view class="kg">
+  <block wx:if="{{imageSrc}}">
+          <image src="{{imageSrc}}" class="image" mode="aspectFit"></image>
+  </block>
+ <block wx:else>
+   <view class="image-plus image-plus-nb" bindtap="chooseImage">
+      <image src="../../image/sssss.png" style="width:100%;height:100%"></image>
+   </view>
+  </block>
+      </view>
+</view>
+
+
+<view class="but">
+    <button bindtap="formDataCommit" disabled="{{disabled}}" style="color:#000">      提交认证     </button>
+</view>
+<!--
+<view class="alert {{error}}">
+        <text>用户名或密码错误</text>
+    </view>-->
+</view>

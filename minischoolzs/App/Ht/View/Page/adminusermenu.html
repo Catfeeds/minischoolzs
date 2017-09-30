@@ -1,0 +1,118 @@
+<div class="aaa_pts_left_1" onclick="left_open(this,'zh')">综合管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="zh">
+ <ul class="aaa_pts_left_2">
+   <!-- <li>
+       <a href="{:U('More/pweb_gl')}" target="iframe">前台管理</a>
+   </li> -->
+   <!-- <li>
+       <a href="{:U('More/index')}" target="iframe">APP首页设置</a>
+   </li> -->
+   <li>
+       <a href="{:U('More/setup')}" target="iframe">小程序配置</a>
+   </li>
+ </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'user')">会员管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="user">
+   <ul class="aaa_pts_left_2">
+     <li><a href="{:U('User/index')}" target="iframe">会员管理</a></li>
+   </ul>
+   <ul class="aaa_pts_left_2">
+     <li><a href="{:U('User/audit')}" target="iframe">企业会员审核</a></li>
+   </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'shangchang')">企业管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="shangchang">
+ <ul class="aaa_pts_left_2">
+  <li>
+       <a href="{:U('Sccat/add')}" target="iframe">添加企业分类</a>
+   </li>
+   <li>
+       <a href="{:U('Sccat/index')}" target="iframe">企业分类管理</a>
+   </li>
+   <li>
+       <a href="{:U('Shangchang/add')}" target="iframe">添加企业</a>
+   </li>
+   <li>
+       <a href="{:U('Shangchang/index')}" target="iframe">企业管理</a>
+   </li>
+ </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'area')">地区管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="area">
+ <ul class="aaa_pts_left_2">
+   <li>
+       <a href="{:U('Area/add')}" target="iframe">添加地区</a>
+   </li>
+   <li>
+       <a href="{:U('Area/index')}" target="iframe">地区管理</a>
+   </li>
+ </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'htype')">户型管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="htype">
+ <ul class="aaa_pts_left_2">
+   <li>
+       <a href="{:U('Htype/add')}" target="iframe">添加户型</a>
+   </li>
+   <li>
+       <a href="{:U('Htype/index')}" target="iframe">户型管理</a>
+   </li>
+ </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'product')">产品管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="product">
+ <ul class="aaa_pts_left_2">
+   <li>
+       <a href="{:U('ProCat/add')}" target="iframe">添加产品分类</a>
+   </li>
+   <li>
+       <a href="{:U('ProCat/index')}" target="iframe">产品分类管理</a>
+   </li>
+   <li>
+       <a href="{:U('Product/add')}" target="iframe">添加产品</a>
+   </li>
+   <li>
+       <a href="{:U('Product/index')}" target="iframe">产品管理</a>
+   </li>
+ </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'supply')">供求管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="supply">
+ <ul class="aaa_pts_left_2">
+   <!-- <li>
+       <a href="{:U('News/add')}" target="iframe">添加新闻</a>
+   </li> -->
+   <li>
+       <a href="{:U('Supply/index')}" target="iframe">供求管理</a>
+   </li>
+ </ul>
+</div>
+
+<div class="aaa_pts_left_1" onclick="left_open(this,'advertisement')">广告管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="advertisement">
+ <ul class="aaa_pts_left_2">
+   <li>
+      <a href="{:U('Guanggao/index')}" target="iframe">广告管理</a>
+   </li>
+   <li>
+    <a href="{:U('Guanggao/add')}" target="iframe">添加广告</a>
+   </li>
+ </ul>
+</div>
+
+<?php if(intval($_SESSION['admininfo']['qx'])==4) { ?>
+<div class="aaa_pts_left_1" onclick="left_open(this,'adminuser')">管理员管理</div>
+<div class="aaa_pts_left_3" style="display:none;" id="adminuser">
+   <ul class="aaa_pts_left_2">
+     <li><a href="{:U('Adminuser/add')}" target="iframe">添加管理员</a></li>
+     <li><a href="{:U('Adminuser/adminuser')}" target="iframe">管理员管理</a></li>
+   </ul>
+</div>
+<?php } ?>

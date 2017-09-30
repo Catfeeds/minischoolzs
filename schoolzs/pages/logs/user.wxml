@@ -1,0 +1,44 @@
+<!--pages/user/user.wxml-->
+<view class="page">
+    <view class="userinfo">
+			<image class="userinfo-avatar fl_l" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+			<text class="fl_l">{{userInfo.nickName}}</text></view>
+<view class="qbdd mt10">
+ <navigator url="../personal/personal">
+    <span class="font_14 c3" style='font-size: 35rpx;'>个人信息</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+    </navigator>
+    </view>
+    <view class="qbdd mt10" wx:if="{{userType==1}}">
+      <navigator url="../gongying/gongying">
+      <span class="font_14 c3"  style='font-size: 35rpx;'>我的供应</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+      </navigator>
+    </view>
+    <view class="qbdd mt10" wx:if="{{userType==1}}">
+      <navigator url="../qiugou/qiugou">
+      <span class="font_14 c3"  style='font-size: 35rpx;'>我的求购</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+      </navigator>
+    </view>
+    <view class="qbdd mt10" wx:if="{{userType==2}}">
+      <navigator url="../gongyingshop/gongying">
+      <span class="font_14 c3"  style='font-size: 35rpx;'>已接单</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+      </navigator>
+    </view>
+    <view class="qbdd mt10" wx:if="{{userType==2}}">
+      <navigator url="../qiugoushop/qiugou">
+      <span class="font_14 c3"  style='font-size: 35rpx;'>已联系</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+      </navigator>
+    </view>
+    <view class="qbdd mt10">
+      <navigator url="../lianxi/lianxi">
+      <span class="font_14 c3"  style='font-size: 35rpx;'>联系我们</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+      </navigator>
+    </view>
+</view>
+
+

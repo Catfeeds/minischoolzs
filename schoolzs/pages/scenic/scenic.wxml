@@ -1,0 +1,25 @@
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+<view class="cl">
+
+<view class="c2">{{info.name}}</view>
+<view class="shijian">
+<view style="flex:1;color:gray;">发布时间：{{info.addtime}}</view>
+<view style="text-align:right;flex:1;padding-right:30rpx;color:gray;"> 浏览次数：{{info.renqi}}</view>
+</view>
+</view>
+<view class="jingdian">
+  <image class="jin" src="../../image/jing.png"></image>
+  <text class="jindin">信息介绍</text>
+</view>
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
